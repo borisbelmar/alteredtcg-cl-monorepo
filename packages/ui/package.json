@@ -8,7 +8,8 @@
     "./utils": "./src/utils.ts",
     "./button": "./src/components/ui/button.tsx",
     "./avatar": "./src/components/ui/avatar.tsx",
-    "./logo-altered-cl": "./src/components/app/logo-altered-cl.tsx"
+    "./logo-altered-cl": "./src/components/app/logoAlteredCl.tsx",
+    "./corner-altered": "./src/components/app/cornerAltered.tsx"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",

@@ -7,6 +7,9 @@ const config: Config =  {
     './app/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     '../../packages/ui/src/**/*.{ts,tsx}'
+  ],
+  safelist: [
+    'gradient'
   ]
 }
 
