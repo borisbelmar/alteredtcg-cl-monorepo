@@ -57,11 +57,16 @@ export default function TiendasAdheridas () {
       name: "Zona X Gamers",
       link: "https://zonaxgamers.cl/",
       logo: "/adheridos/zona-x-gamers.png"
+    },
+    {
+      name: "Demente",
+      link: "https://dementegames.cl/",
+      logo: "/adheridos/demente.png"
     }
   ].sort(() => Math.random() - 0.5), [])
 
   return (
-    <div className="flex flex-col items-center justify-center text-center mt-16 mb-8 px-4">
+    <div className="flex flex-col items-center justify-center text-center mt-16 mb-8 px-4 max-w-6xl mx-auto">
         <h3 className="text-lg sm:text-2xl font-bold text-white mb-4">
           Tiendas y Comunidades Adheridas
         </h3>

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="flex flex-col items-center justify-center w-full px-8 md:px-16 flex-1 my-16 gap-8">
+    <div className="flex flex-col items-center justify-center w-full px-8 md:px-16 flex-1 my-16 gap-8 max-w-6xl mx-auto">
       <h3 className="text-xl sm:text-2xl font-bold">
         Sobre nosotros
       </h3>
