@@ -62,6 +62,16 @@ export default function TiendasAdheridas () {
       name: "Demente",
       link: "https://dementegames.cl/",
       logo: "/adheridos/demente.png"
+    },
+    {
+      name: "Flexo Games",
+      link: "https://flexogames.cl/",
+      logo: "/adheridos/flexo-games.png"
+    },
+    {
+      name: "Mesa 1",
+      link: "https://mesa1.cl/",
+      logo: "/adheridos/mesa-1.png"
     }
   ].sort(() => Math.random() - 0.5), [])
 
