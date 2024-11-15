@@ -81,6 +81,11 @@ export default function TiendasAdheridas () {
       name: "Mesa 1",
       link: "https://mesa1.cl/",
       logo: "/adheridos/mesa-1.png"
+    },
+    {
+      name: "Gato Arcano",
+      link: "https://gatoarcano.cl/",
+      logo: "/adheridos/gato-arcano.png"
     }
   ].sort(() => Math.random() - 0.5), [])
 
