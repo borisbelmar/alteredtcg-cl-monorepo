@@ -1,5 +1,14 @@
+'use client'
+
 import Image from "next/image"
 import { useMemo } from "react"
+import { motion } from "motion/react"
+
+const itemAnimation = {
+  initial: { scale: 0.3 },
+  whileInView: { scale: [0.3, 1, 1.2, 1] },
+  viewport: { margin: "-100px", once: true }
+}
 
 export default function TiendasAdheridas () {
   const adheridos = useMemo(() => [
@@ -82,9 +91,18 @@ export default function TiendasAdheridas () {
         </h3>
         <div className="flex flex-wrap gap-8 justify-center">
           {adheridos.map(({ name, link, logo }) => (
-            <a key={name} href={link} target="_blank" rel="noopener noreferrer">
+            <motion.a
+              key={name}
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={itemAnimation.initial}
+              whileInView={itemAnimation.whileInView}   
+              viewport={itemAnimation.viewport}
+              transition={{ delay: Math.random() * 0.5 }}
+            >
               <Image key={name} src={logo} alt={name} width={160} height={160} quality={100} />
-            </a>
+            </motion.a>
           ))}
         </div>
       </div>
