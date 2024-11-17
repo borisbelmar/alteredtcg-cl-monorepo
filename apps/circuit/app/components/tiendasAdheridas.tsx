@@ -1,16 +1,8 @@
 'use client'
 
 import Image from "next/image"
-import { useEffect, useMemo } from "react"
+import { useMemo } from "react"
 import { motion } from "motion/react"
-import { MotionGlobalConfig } from 'framer-motion';
-
-const disableAnimationsOnMobile = () => {
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  if (isMobile) {
-    MotionGlobalConfig.skipAnimations = true;
-  }
-};
 
 const itemAnimation = {
   initial: { scale: 0.3 },
@@ -95,11 +87,7 @@ export default function TiendasAdheridas () {
       link: "https://gatoarcano.cl/",
       logo: "/adheridos/gato-arcano.png"
     }
-  ].sort(() => Math.random() - 0.5), [])
-
-  useEffect(() => {
-    disableAnimationsOnMobile()
-  }, [])
+  ], [])
 
   return (
     <div className="flex flex-col items-center justify-center text-center mt-16 mb-8 px-4 max-w-6xl mx-auto">

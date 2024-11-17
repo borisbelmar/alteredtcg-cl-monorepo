@@ -38,6 +38,7 @@ const workSans = localFont({
 export const metadata: Metadata = {
   title: "Circuito Competitivo | Altered TCG Chile",
   description: "Circuito competitivo de Altered TCG en Chile. Comunidad, torneos y más.",
+  metadataBase: new URL("https://circuito.alteredtcg.cl"),
 };
 
 export default function RootLayout({
