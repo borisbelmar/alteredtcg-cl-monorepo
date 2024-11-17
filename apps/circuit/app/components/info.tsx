@@ -4,14 +4,16 @@ import Image from "next/image";
 import { motion } from "motion/react"
 
 export default function Info () {
+  const isMobile = window.innerWidth < 768
+
   return (
     <div className="flex flex-col items-center justify-center w-full px-8 md:px-16 flex-1 my-16 gap-16 md:gap-0 max-w-6xl mx-auto">
       <motion.div
         className="flex gap-8 items-center flex-col-reverse md:flex-row"
-        initial={{ opacity: 0, x: 0 }}
+        initial={isMobile ? { opacity: 1, x: 0 } : { opacity: 0, x: 0 }}
         whileInView={{ opacity: 1, x: [-100, 0] }}
         transition={{ duration: 0.5 }}
-        viewport={{ once: true, margin: "-250px" }}
+        viewport={isMobile ? { once: true, margin: "-250px" } : undefined}
       >
         <Image className="px-16 md:px-0 relative left-0 md:-left-24" src="/brushed-amarok.png" alt="Brushed Amarok" width={480} height={480} />
         <div className="flex flex-col gap-3 relative">
@@ -26,10 +28,10 @@ export default function Info () {
       </motion.div>
       <motion.div
         className="flex gap-8 items-center flex-col md:flex-row"
-        initial={{ opacity: 0, x: 100 }}
+        initial={isMobile ? { opacity: 1, x: 100 } : { opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
-        viewport={{ once: true, margin: "-250px" }}
+        viewport={isMobile ? { once: true, margin: "-250px" } : undefined}
       >
         <div className="flex flex-col gap-3">
           <h3 className="text-xl sm:text-2xl font-bold text-white">

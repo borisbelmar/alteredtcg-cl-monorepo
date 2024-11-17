@@ -4,13 +4,14 @@ import Image from "next/image";
 import { motion } from "motion/react";
 
 export default function About() {
+  const isMobile = window.innerWidth < 768
   return (
     <motion.div
       className="flex flex-col items-center justify-center w-full px-8 md:px-16 flex-1 my-16 gap-8 max-w-6xl mx-auto"
-      initial={{ opacity: 0, y: -100 }}
+      initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      viewport={{ once: true, margin: "-250px" }}
+      viewport={isMobile ? { once: true, margin: "-250px" } : undefined}
     >
       <h3 className="text-xl sm:text-2xl font-bold">
         Sobre nosotros
