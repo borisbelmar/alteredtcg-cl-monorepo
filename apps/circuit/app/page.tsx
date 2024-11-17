@@ -13,7 +13,7 @@ export default function Page () {
       <Info />
       <Image src="/separator.png" alt="Separator" className="w-full h-0.5 px-16" width={900} height={5} />
       <About />
-      <footer className="w-full text-center py-4 text-xs self-end">
+      <footer className="w-full text-center py-4 text-xs self-end px-2">
         <p>
           © 2024 - Desarrollado con ❤️ por <strong>Boris Belmar</strong> de <strong>Alterados TCG</strong> - <strong>Altered</strong> es una marca registrada de <strong>Equinox</strong>.
         </p>
