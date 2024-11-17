@@ -1,0 +1,13 @@
+{
+  "name": "@repo/schemas",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "exports": {
+    "./card": "./card.schema.ts",
+    "./price": "./price.schema.ts",
+    "./user": "./user.schema.ts"
+  }
+}

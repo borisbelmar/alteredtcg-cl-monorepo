@@ -1,0 +1,16 @@
+{
+  "name": "@repo/backend",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@repo/schemas": "*",
+    "mongoose": "^8.8.1"
+  },
+  "exports": {
+    "./utils/connect-to-mongo": "./lib/connectToMongo.ts",
+    "./models/card": "./models/card.ts",
+    "./models/price": "./models/price.ts",
+    "./models/user": "./models/user.ts",
+    "./errors/controller-error": "./errors/controllerError.ts"
+  }
+}
