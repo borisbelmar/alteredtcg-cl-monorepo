@@ -6,7 +6,7 @@ import Info from "./components/info"
 
 export default function Page () {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen w-full bg-neutral-900">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-neutral-900 overflow-hidden w-screen">
       <Hero />
       <TiendasAdheridas />
       <Image src="/separator.png" alt="Separator" className="w-full h-0.5 px-16" width={900} height={5} />
