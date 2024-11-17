@@ -2,8 +2,10 @@ import mongoose, { Mongoose } from 'mongoose'
 
 const MONGO_URI = process.env.MONGO_URI as string
 
+console.log('MONGO_URI:', MONGO_URI)
+
 if (!MONGO_URI) {
-  throw new Error('Invalid/Missing environment variable: "MONGODB_URI"');
+  throw new Error('Invalid/Missing environment variable: "MONGO_URI"');
 }
 
 let cache: { conn: Mongoose | null } = { conn: null };
