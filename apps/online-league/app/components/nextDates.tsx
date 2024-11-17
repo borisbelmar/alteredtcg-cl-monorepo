@@ -19,7 +19,7 @@ export default function NextDates () {
           <div className="flex flex-col p-4 justify-center gap-2">
             <a
               className="bg-sky-500 text-white px-4 py-2 rounded-lg hover:bg-sky-600 transition-colors whitespace-nowrap text-center"
-              href="https://boardgamearena.com/tournament?id=340269"
+              href="http://boardgamearena.com/tournament?id=340336&token=mA41l1YYzaERGt9VLHRoNAevb9ANDAbI"
               target="_blank"
               rel="noreferrer"
             >
