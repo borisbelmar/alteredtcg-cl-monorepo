@@ -2,9 +2,14 @@
 
 import Image from "next/image";
 import { motion } from "motion/react"
+import { useEffect, useState } from "react";
 
 export default function Info () {
-  const isMobile = window.innerWidth < 768
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768)
+  }, [])
 
   return (
     <div className="flex flex-col items-center justify-center w-full px-8 md:px-16 flex-1 my-16 gap-16 md:gap-0 max-w-6xl mx-auto">
