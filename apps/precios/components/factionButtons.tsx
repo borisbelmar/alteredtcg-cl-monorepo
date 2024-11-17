@@ -2,7 +2,8 @@ import { FACTIONS } from "@repo/schemas/card"
 
 interface FactionButtonsProps {
   factionsSelected: string[]
-  onFactionSelect: (faction: string) => void
+  // eslint-disable-next-line no-unused-vars
+  onFactionSelect: (faction: string) => void // FIXME: This error is wrong
 }
 
 export default function FactionButtons ({

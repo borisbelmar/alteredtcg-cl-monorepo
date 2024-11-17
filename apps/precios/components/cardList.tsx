@@ -37,7 +37,7 @@ export default function CardList({ cards }: CardListProps) {
   }), [cards, factionsSelected, search])
 
   const sortedCards = useMemo(() => {
-    return filteredCards.sort((a, b) => {
+    return [...filteredCards].sort((a, b) => {
       if (sortBy === 'default') {
         return 0
       }

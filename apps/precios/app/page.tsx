@@ -49,8 +49,8 @@ export default async function Page () {
   const data: CardResponse[] = await aggregate.exec()
 
   return (
-    <div className="bg-zinc-900 pt-12">
-      <div className="text-center flex flex-col max-w-6xl mx-auto items-center justify-between gap-8 px-8">
+    <div className="bg-zinc-900 pt-12 pb-8">
+      <div className="text-center flex flex-col max-w-6xl mx-auto items-center justify-between gap-8 px-8 mb-8">
         <Image src="/altered-cl-white.png" width={200} height={200} alt="Altered CL" />
         <h1 className="sm:text-3xl text-lg max-w-6xl mx-auto px-4 sm:px-8 font-bold">
           Referencia de precios Singles Altered TCG
@@ -62,7 +62,10 @@ export default async function Page () {
           <strong className="font-bold">Nota:</strong> Los precios mostrados son para el mercado chileno y están en pesos. Ni los precios ni este sitio web son oficiales de Altered TCG o tienen relación alguna con Asmodee o Equinox, solo es una herramienta de la comunidad para la comunidad.
         </p>
         <p className="text-xs sm:text-sm max-w-6xl mx-auto px-4 sm:px-8">
-          Desarrollado y mantenido con ❤️ por <strong className="font-bold">Altered TCG Chile</strong> y <strong className="font-bold">Alterados TCG</strong>.
+          <strong className="font-bold">Sobre las cartas únicas:</strong> El precio de las cartas únicas actualmente es muy difícil de estimar, por lo que no se incluyen en esta lista. Si tienes alguna duda sobre el precio de una carta única, te recomendamos consultar en grupos, Discord o con tu comunidad local.
+        </p>
+        <p className="text-xs sm:text-sm max-w-6xl mx-auto px-4 sm:px-8">
+          Desarrollado y mantenido con ❤️ por <strong className="font-bold">Altered TCG Chile</strong> y <a className="font-bold hover:underline" href="https://linktr.ee/alterados.tcg" target="_blank" rel="noopener noreferrer">Alterados TCG</a>.
         </p>
       </div>
       <CardList cards={data} />
