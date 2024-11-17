@@ -37,7 +37,8 @@ const workSans = localFont({
 
 export const metadata: Metadata = {
   title: "Liga Online CL | Altered TCG Chile",
-  description: "Liga online de Altered TCG en Chile en BGA.",
+  description: "Liga online semanal de Altered TCG en Chile organizada por Alterados TCG y patrocinada por El Reino de los Duelos",
+  metadataBase: new URL("https://liga.alteredtcg.cl"),
 };
 
 export default function RootLayout({
@@ -46,7 +47,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body className={`${workSans.variable} font-sans dark`}>
         {children}
       </body>
