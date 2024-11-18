@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function NextDates () {
   return (
     <div className="flex flex-col gap-2 max-w-6xl w-full mx-auto px-8 py-16">
-      <h2 className="text-2xl font-bold">Próxima Fecha</h2>
+      <h2 className="text-2xl font-bold">Fechas Pasadas</h2>
       <Image src="/separator-half.png" alt="Separator" className="w-52 h-0.5 rotate-180 mb-8" width={250} height={5} />
       <div className="flex flex-col sm:flex-row gap-4 border rounded-lg overflow-hidden bg-sky-950">
         <div className="relative">
@@ -19,11 +19,19 @@ export default function NextDates () {
           <div className="flex flex-col p-4 justify-center gap-2">
             <a
               className="bg-sky-500 text-white px-4 py-2 rounded-lg hover:bg-sky-600 transition-colors whitespace-nowrap text-center"
-              href="http://boardgamearena.com/tournament?id=340336&token=mA41l1YYzaERGt9VLHRoNAevb9ANDAbI"
+              href="http://boardgamearena.com/tournament?id=340336"
               target="_blank"
               rel="noreferrer"
             >
-              Inscribirme en BGA
+              Ver Torneo en BGA
+            </a>
+            <a
+              className="bg-sky-500 text-white px-4 py-2 rounded-lg hover:bg-sky-600 transition-colors whitespace-nowrap text-center"
+              href="https://boardgamearena.com/tournament?id=340362"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Ver Torneo Bala de Desempate
             </a>
           </div>
         </div>
