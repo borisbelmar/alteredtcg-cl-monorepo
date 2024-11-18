@@ -6,6 +6,7 @@ import { useMemo, useState } from "react"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@repo/ui/select"
 import FactionButtons from "./factionButtons"
 import CardItem from "./cardItem"
+import Fuse from "fuse.js"
 
 interface CardListProps {
   cards: CardResponse[]
@@ -30,14 +31,25 @@ export default function CardList({ cards }: CardListProps) {
     if (factionsSelected.length !== 0) {
       matchesSearch = factionsSelected.includes(card.faction)
     }
-    if (search.length !== 0) {
-      matchesSearch = card.name.toLowerCase().includes(search.toLowerCase())
-    }
     return matchesSearch
   }), [cards, factionsSelected, search])
 
+  const fuse = useMemo(() => {
+    return new Fuse(filteredCards, {
+      keys: ['name'],
+      threshold: 0.3
+    })
+  }, [filteredCards])
+
+  const filteredCardsBySearch = useMemo(() => {
+    if (search === '') {
+      return filteredCards
+    }
+    return fuse.search(search).map((result) => result.item)
+  }, [search, fuse, filteredCards])
+
   const sortedCards = useMemo(() => {
-    return [...filteredCards].sort((a, b) => {
+    return [...filteredCardsBySearch].sort((a, b) => {
       if (sortBy === 'default') {
         return 0
       }
