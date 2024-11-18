@@ -1,15 +1,17 @@
 {
-  "name": "sync-cards",
+  "name": "scripts",
   "version": "0.0.0",
   "private": true,
   "type": "module",
   "scripts": {
     "sync": "tsx ./syncCards.ts",
-    "csv": "tsx ./csv.ts"
+    "csv": "tsx ./csv.ts",
+    "from-csv": "tsx ./fromCsv.ts"
   },
   "dependencies": {
     "@repo/backend": "*",
     "axios": "^1.7.7",
+    "csv-parser": "^3.0.0",
     "querystring": "^0.2.1"
   },
   "devDependencies": {

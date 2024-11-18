@@ -11,6 +11,8 @@ export type CardResponse = Card & {
   faction: keyof typeof FACTIONS
 }
 
+export const revalidate = 60 * 60 * 12
+
 export default async function Page () {
   await connectToMongo()
 
