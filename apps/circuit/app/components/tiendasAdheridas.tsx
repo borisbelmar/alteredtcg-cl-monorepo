@@ -86,6 +86,16 @@ export default function TiendasAdheridas () {
       name: "Gato Arcano",
       link: "https://gatoarcano.cl/",
       logo: "/adheridos/gato-arcano.png"
+    },
+    {
+      name: "La Loseta",
+      link: "https://laloseta.cl/",
+      logo: "/adheridos/la-loseta.png"
+    },
+    {
+      name: "PlayCafe",
+      logo: "/adheridos/playcafe.png",
+      link: "https://www.instagram.com/playcafe.rb/"
     }
   ], [])
 
