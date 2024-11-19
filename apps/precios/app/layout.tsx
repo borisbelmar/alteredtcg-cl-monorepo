@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "@repo/ui/globals.css";
 import './icons.css'
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const workSans = localFont({
   src: [
@@ -48,6 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <GoogleTagManager gtmId="GTM-PH85H7PH" />
       <body className={`${workSans.variable} font-sans dark`}>
         {children}
       </body>
