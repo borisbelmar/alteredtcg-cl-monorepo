@@ -53,6 +53,14 @@ export default function RootLayout({
       <body className={`${workSans.variable} font-sans dark`}>
         {children}
       </body>
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-PH85H7PH"
+          height="0"
+          width="0"
+          style={{ display: "none", visibility: "hidden" }}
+        />
+      </noscript>
     </html>
   );
 }
