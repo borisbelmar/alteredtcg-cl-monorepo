@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^15.0.3",
     "@repo/ui": "*",
     "motion": "^11.11.17",
     "next": "14.2.6",

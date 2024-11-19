@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "@repo/ui/globals.css";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const workSans = localFont({
   src: [
@@ -47,9 +48,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
+      <GoogleTagManager gtmId="GTM-NNQQ8BS4" />
       <body className={`${workSans.variable} font-sans dark`}>
         {children}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-NNQQ8BS4"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
       </body>
     </html>
   );
