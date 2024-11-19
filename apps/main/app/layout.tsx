@@ -48,12 +48,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <GoogleTagManager gtmId="GTM-PH85H7PH" />
+      <GoogleTagManager gtmId="GTM-WB7VJ8TJ" />
       <body className={`${workSans.variable} font-sans dark`}>
         {children}
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-PH85H7PH"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-WB7VJ8TJ"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
