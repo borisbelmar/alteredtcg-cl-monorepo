@@ -1,33 +1,14 @@
-'use client'
-
 import LogoAlteredCl from "@repo/ui/logo-altered-cl";
+import { Metadata } from "next";
 import Image from "next/image";
-import { useEffect } from "react";
+import BackgroundLayout from "./backgroundLayout";
+
+export const metadata: Metadata = {
+  title: "Torneo Festigeek | Altered TCG Chile",
+  description: "Primer torneo de la comunidad para la comunidad. 8 de Diciembre de 2024 en la Universidad Federico Santa María, Campus San Joaquín - Santiago, Chile.",
+}
 
 export default function Event() {
-  useEffect(() => {
-    const isMobile = () => {
-      return window.innerWidth < 768;
-    }
-
-    const infoContainer = document.getElementById('INFO');
-
-    const changeBackground = () => {
-      if (isMobile()) {
-        infoContainer!.style.backgroundImage = 'url("/events/festigeek/bg-evento-geekusm-mobile.png")';
-      } else {
-        infoContainer!.style.backgroundImage = 'url("/events/festigeek/bg-evento-geekusm-desktop.png")';
-      }
-    }
-
-    changeBackground();
-
-    document.addEventListener('scroll', changeBackground);
-
-    return () => {
-      document.removeEventListener('scroll', changeBackground);
-    }
-  }, []);
   return (
     <div className="flex flex-col min-h-screen">
       <div className="flex flex-col items-center justify-center h-[70vh] relative w-full overflow-hidden">
@@ -59,14 +40,14 @@ export default function Event() {
               href="https://tiendalamadriguera.cl/product/torneo-altered-festigeek-utfsm-2024/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex px-4 py-4 gap-2 text-lg sm:text-xl items-center bg-sky-600 hover:bg-sky-700 text-white font-bold rounded-lg transition-all duration-200 uppercase"
+              className="inline-flex px-8 py-4 gap-2 text-base sm:text-lg items-center bg-sky-600 hover:bg-sky-700 text-white font-bold rounded-lg transition-all duration-200 uppercase"
             >
               Asegura tu cupo hoy mismo - $10.000 CLP
             </a>
           </div>
         </div>
       </div>
-      <div id="INFO" className="flex flex-col flex-1 px-4 py-8 text-center leading-relaxed min-h-screen items-center justify-center bg-neutral-900 bg-cover bg-center">
+      <BackgroundLayout>
         <div className="max-w-3xl mx-auto p-8 bg-neutral-950/50 rounded-lg space-y-4">
           <h4 className="font-bold text-xl sm:text-2xl">
             Premios al top y muchas sorpresas más.
@@ -85,11 +66,11 @@ export default function Event() {
           <div className="flex justify-center items-center pt-6 gap-8 flex-col sm:flex-row">
             <div className="flex flex-col items-center justify-center space-y-2">
               <p className="text-sm italic">Invita:</p>
-              <Image src="/events/festigeek/geekusm-logo.png" width={200} height={200} alt="GeekUSM" />
+              <Image src="/events/festigeek/geekusm-logo.png" width={150} height={150} alt="GeekUSM" />
             </div>
             <div className="flex flex-col items-center justify-center space-y-2">
               <p className="text-sm italic">Organiza:</p>
-              <Image src="/events/festigeek/alteredtcgcl-logo.png" width={200} height={200} alt="Altered TCG Chile" />
+              <Image src="/events/festigeek/alteredtcgcl-logo.png" width={150} height={150} alt="Altered TCG Chile" />
             </div>
           </div>
         </div>
@@ -100,7 +81,7 @@ export default function Event() {
           width={200}
           height={200}
         />
-      </div>
+      </BackgroundLayout>
       <div>
         <footer className="w-full text-center text-white py-4 text-xs sm:text-sm bg-neutral-950">
           <p>
