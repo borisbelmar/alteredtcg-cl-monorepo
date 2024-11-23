@@ -96,6 +96,15 @@ export default function TiendasAdheridas () {
       name: "PlayCafe",
       logo: "/adheridos/playcafe.png",
       link: "https://www.instagram.com/playcafe.rb/"
+    },
+    {
+      name: "Atlantis",
+      logo: "/adheridos/atlantis.png"
+    },
+    {
+      name: "Area 52",
+      logo: "/adheridos/area-52.png",
+      link: "https://www.instagram.com/area52.cl/"
     }
   ], [])
 
