@@ -28,7 +28,7 @@ export default function Live () {
         Streaming Oficial de la Liga
       </h2>
       <div ref={ref} className="relative w-full flex-1 max-w-2xl" style={{ aspectRatio: '16/9' }}>
-        <iframe ref={iframeRef} className="abosolute inset-0" src="https://www.youtube.com/embed/IibdwLyohzw?si=IUGF293qWxYtmTHu" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" />
+        <iframe ref={iframeRef} className="abosolute inset-0" src="https://www.youtube.com/embed/rktKmSw89Ao?si=z8MmYxCtGAyol5hU" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" />
       </div>
     </div>
   )
