@@ -26,7 +26,7 @@ export default function Event() {
             Primer Torneo de la comunidad para la comunidad
           </h3>
           <p className="sm:text-2xl font-bold uppercase">
-            8 de Diciembre de 2024 - 14:00 hrs.
+            8 de Diciembre de 2024 - 13:00 hrs.
           </p>
           <a
             className="sm:text-lg mb-8 hover:underline"
@@ -53,12 +53,29 @@ export default function Event() {
             Premios al top y muchas sorpresas más.
           </h4>
           <p className="font-semibold text-lg sm:text-lg">
-            4 o 5 rondas suizas (dependiendo de la cantidad de jugadores) y top 4.
+            4 o 5 rondas suizas (dependiendo de la cantidad de jugadores) y ronda de desempate.
           </p>
           <div className="space-y-4 text-sm sm:text-base">
             <p>
               Sean bienvenidos al primer torneo organizado por Altered TCG chile! En esta fecha podrán demostrar el poder de sus barajas y la fortaleza de su estrategia enfrentando a sus rivales en cada expedición. Este torneo tiene como objetivo incentivar los eventos especiales fuera de las ligas semanales, dónde el ganador se lleva toda la gloria.
             </p>
+            <h3 className="font-bold text-lg sm:text-xl">
+              Itinerario del torneo:
+            </h3>
+            <ul>
+              <li>
+                <strong>13:00 hrs.</strong> - Inscripción y confirmación de jugadores.
+              </li>
+              <li>
+                <strong>14:00 hrs.</strong> - Inicio del torneo.
+              </li>
+              <li>
+                <strong>17:00 hrs.</strong> - Ronda de desempate.
+              </li>
+              <li>
+                <strong>17:30 hrs.</strong> - Premiación y cierre del torneo.
+              </li>
+            </ul>
             <p>
               La entrada a la feria <strong>FESTIGEEK</strong> es gratuita y el torneo es un evento dentro de esta, por lo que están todos invitados a disfrutar de la feria y sus diferentes actividades.
             </p>
