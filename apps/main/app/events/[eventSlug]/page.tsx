@@ -79,6 +79,22 @@ export default function Event() {
             <p>
               La entrada a la feria <strong>FESTIGEEK</strong> es gratuita y el torneo es un evento dentro de esta, por lo que están todos invitados a disfrutar de la feria y sus diferentes actividades.
             </p>
+            <a
+              className="bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 transition-colors whitespace-nowrap text-center block mt-4"
+              href="https://www.altered.gg/events/01JDFGFR4P5GSM6Z0VN0CVHVBK"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Pre-regístrate en el Evento
+            </a>
+            <a
+              className="bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 transition-colors whitespace-nowrap text-center block"
+              href="https://tiendalamadriguera.cl/product/torneo-altered-festigeek-utfsm-2024/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Asegura tu entrada aquí
+            </a>
           </div>
           <div className="flex justify-center items-center pt-6 gap-8 flex-col sm:flex-row">
             <div className="flex flex-col items-center justify-center space-y-2">
