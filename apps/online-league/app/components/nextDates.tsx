@@ -27,7 +27,7 @@ export default function NextDates () {
       <EventItem
         image="/liga-fecha-3.webp"
         title="Liga CL Fecha #7"
-        date="Domingo 2 de Diciembre"
+        date="Domingo 1 de Diciembre"
         time="20:00 hrs"
         buttonLabel="Inscríbete ahora en BGA"
         tournamentLink="http://boardgamearena.com/tournament?id=343673&token=u4IPCUnMRjRW7ayVETVj1oCuEP4FFFS7"
