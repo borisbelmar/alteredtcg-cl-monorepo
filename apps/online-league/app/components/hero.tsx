@@ -27,14 +27,14 @@ export default function Hero () {
           <p className="text-sm sm:text-lg text-white my-8">
             La liga online de Altered TCG Chile es un torneo semanal <strong>gratuito</strong> que se juega a través de la plataforma <strong>BGA</strong> que busca fomentar la competencia y el juego en la región. <strong>2 sobres de premio para el ganador de cada fecha</strong>.
           </p>
-          <span
+          <a
             className="bg-sky-500 text-white font-bold px-6 py-4 rounded-lg hover:bg-sky-600 transition-colors whitespace-nowrap text-center"
-            // href="http://boardgamearena.com/tournament?id=341463&token=4Z4FYJAYCNCNu4rL5TEwiyWx28DjdeCX"
-            // target="_blank"
-            // rel="noreferrer"
+            href="http://boardgamearena.com/tournament?id=343673&token=u4IPCUnMRjRW7ayVETVj1oCuEP4FFFS7"
+            target="_blank"
+            rel="noreferrer"
           >
-            Siguiente fecha pendiente
-          </span>
+            Inscríbete para la fecha #7
+          </a>
         </div>
       </div>
     </div>
