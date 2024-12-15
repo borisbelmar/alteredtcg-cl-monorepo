@@ -29,16 +29,16 @@ const pastEvents = [
 export default function NextDates () {
   return (
     <div className="flex flex-col gap-2 max-w-6xl w-full mx-auto px-8 py-16">
-      {/* <h2 className="text-2xl font-bold">Próximas Fechas</h2>
+      <h2 className="text-2xl font-bold">Próximas Fechas</h2>
       <Image src="/separator-half.png" alt="Separator" className="w-52 h-0.5 mb-4" width={250} height={5} />
       <EventItem
-        image="/liga-fecha-3.webp"
-        title="Liga CL Fecha #7"
-        date="Domingo 1 de Diciembre"
+        image="/liga-fecha-4.webp"
+        title="Liga CL Fecha #8"
+        date="Domingo 15 de Diciembre"
         time="20:00 hrs"
         buttonLabel="Inscríbete ahora en BGA"
-        tournamentLink="http://boardgamearena.com/tournament?id=343673&token=u4IPCUnMRjRW7ayVETVj1oCuEP4FFFS7"
-      /> */}
+        tournamentLink="http://boardgamearena.com/tournament?id=347278&token=8vn5HrBrRfJ5VfYAq7y8uDLHr6bBgtMw"
+      />
       <h2 className="text-2xl font-bold mt-8">Fechas Pasadas</h2>
       <Image src="/separator-half.png" alt="Separator" className="w-52 h-0.5 mb-4" width={250} height={5} />
       <div className="flex flex-col gap-4">
