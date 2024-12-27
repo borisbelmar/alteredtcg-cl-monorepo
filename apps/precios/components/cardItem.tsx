@@ -36,7 +36,7 @@ export default function CardItem ({ card }: CardItemInterface) {
         backgroundColor: FACTIONS[card.faction]?.color
       }}>
         <strong className="text-xs sm:text-lg text-center w-full">
-          ${card.prices?.[0]?.price ?? 500} CLP
+          ${card.price ?? 500} CLP
         </strong>
       </div>
     </div>

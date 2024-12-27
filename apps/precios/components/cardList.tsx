@@ -54,7 +54,7 @@ export default function CardList({ cards }: CardListProps) {
         return 0
       }
       if (sortBy === 'price') {
-        return sortOrder === 'asc' ? (a.prices?.[0]?.price ?? 0) - (b.prices?.[0]?.price ?? 0) : (b.prices?.[0]?.price ?? 0) - (a.prices?.[0]?.price ?? 0)
+        return sortOrder === 'asc' ? (parseInt(a.price, 10) ?? 0) - (parseInt(b.price, 10) ?? 0) : (parseInt(b.price, 10) ?? 0) - (parseInt(a.price, 10) ?? 0)
       }
       if (sortBy === 'name') {
         return sortOrder === 'asc' ? a.name.localeCompare(b.name) : b.name.localeCompare(a.name)

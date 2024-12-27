@@ -1,54 +1,57 @@
-/* eslint-disable @next/next/no-img-element */
-import CardModel from "@repo/backend/models/card"
-import connectToMongo from "@repo/backend/utils/connect-to-mongo"
+/* eslint-disable turbo/no-undeclared-env-vars */
 import { Card, FACTIONS } from '@repo/schemas/card'
 import CardList from "../components/cardList"
 import Image from "next/image"
+import {
+  S3Client,
+  GetObjectCommand
+} from '@aws-sdk/client-s3'
+import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
+import axios from 'axios';
+import { parse } from "csv-parse/sync";
 
 export type CardResponse = Card & {
-  prices: { price: number }[]
-  _id: string
+  price: string
   faction: keyof typeof FACTIONS
 }
 
 export const revalidate = 60 * 60 * 12
 
+const S3 = new S3Client({
+  region: "auto",
+  endpoint: process.env.S3_ACCOUNT as string,
+  credentials: {
+    accessKeyId: process.env.S3_ACCESS_KEY as string,
+    secretAccessKey: process.env.S3_SECRET as string
+  },
+});
+
 export default async function Page () {
-  await connectToMongo()
+  const signedUrl = await getSignedUrl(
+    S3,
+    new GetObjectCommand({ Bucket: "alteredtcg", Key: "precios/1735338210500.csv" }),
+    { expiresIn: 3600 },
+  )
 
-  const aggregate = CardModel.aggregate([
-    {
-      $match: {
-        type: {
-          $in: ['CHARACTER', 'SPELL', 'PERMANENT']
-        }
-      }
-    },
-    {
-      $lookup: {
-        from: 'prices',
-        localField: 'game_id',
-        foreignField: 'game_id',
-        as: 'prices'
-      }
-    },
-    {
-      $project: {
-        _id: 0,
-        game_id: 1,
-        name: 1,
-        faction: 1,
-        type: 1,
-        rarity: 1,
-        imagePath: 1,
-        prices: {
-          $slice: ['$prices', -10]
-        }
-      }
-    }
-  ])
+  const { data: csvData } = await axios.get(signedUrl)
 
-  const data: CardResponse[] = await aggregate.exec()
+  const data: string[][] = parse(csvData, {
+    delimiter: ','
+  })
+
+  const [headers, ...restData] = data
+
+  const objectData: CardResponse[] = restData.map(record => {
+    const obj: Record<string, string> = {}
+    headers?.forEach((key, idx) => {
+      obj[key] = record[idx] as string
+    })
+    return obj
+  }).filter(
+    v => (
+      ['SPELL', 'PERMANENT', 'CHARACTER'].includes(v.type as string) &&
+      ['RARE'].includes(v.rarity as string)
+    )) as unknown as CardResponse[]
 
   return (
     <div className="bg-zinc-900 pt-12 pb-8">
@@ -70,7 +73,7 @@ export default async function Page () {
           Desarrollado y mantenido con ❤️ por <strong className="font-bold">Altered TCG Chile</strong> y <a className="font-bold hover:underline" href="https://linktr.ee/alterados.tcg" target="_blank" rel="noopener noreferrer">Alterados TCG</a>.
         </p>
       </div>
-      <CardList cards={data} />
+      <CardList cards={objectData} />
     </div>
   )
 }
