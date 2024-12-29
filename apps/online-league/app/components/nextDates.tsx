@@ -40,7 +40,7 @@ export default function NextDates () {
       <Image src="/separator-half.png" alt="Separator" className="w-52 h-0.5 mb-4" width={250} height={5} />
       <EventItem
         image="/liga-fecha-5.webp"
-        title="Liga CL Fecha #8"
+        title="Liga CL Fecha #9"
         date="Domingo 29 de Diciembre"
         time="20:00 hrs"
         buttonLabel="Inscríbete ahora en BGA"
