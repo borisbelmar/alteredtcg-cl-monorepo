@@ -2,6 +2,8 @@
 
 import { useEffect, useRef } from "react"
 
+const LIVE_EMBED_URL = "https://www.youtube.com/embed/hbAvRxTn1io?si=PlMeEPC64v6GrVgr"
+
 export default function Live () {
   const ref = useRef<HTMLDivElement>(null)
   const iframeRef = useRef<HTMLIFrameElement>(null)
@@ -28,7 +30,7 @@ export default function Live () {
         Streaming Oficial de la Liga
       </h2>
       <div ref={ref} className="relative w-full flex-1 max-w-2xl" style={{ aspectRatio: '16/9' }}>
-        <iframe ref={iframeRef} className="abosolute inset-0" src="https://www.youtube.com/embed/TGYmHMHTO3g?si=idng4sXlh7j5hakH" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" />
+        <iframe ref={iframeRef} className="abosolute inset-0" src={LIVE_EMBED_URL} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" />
       </div>
     </div>
   )

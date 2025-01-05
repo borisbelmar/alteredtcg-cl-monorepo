@@ -3,6 +3,13 @@ import EventItem from "./eventItem";
 
 const pastEvents = [
   {
+    image: "/liga-fecha-5.webp",
+    title: "Liga CL Fecha #9",
+    date: "Domingo 29 de Diciembre",
+    time: "20:00 hrs",
+    tournamentLink: "http://boardgamearena.com/tournament?id=350989"
+  },
+  {
     image: "/liga-fecha-4.webp",
     title: "Liga CL Fecha #8",
     date: "Domingo 15 de Diciembre",
@@ -39,12 +46,12 @@ export default function NextDates () {
       <h2 className="text-2xl font-bold">Próximas Fechas</h2>
       <Image src="/separator-half.png" alt="Separator" className="w-52 h-0.5 mb-4" width={250} height={5} />
       <EventItem
-        image="/liga-fecha-5.webp"
-        title="Liga CL Fecha #9"
-        date="Domingo 29 de Diciembre"
+        image="/liga-fecha-6.webp"
+        title="Liga CL Fecha #10"
+        date="Domingo 05 de Enero"
         time="20:00 hrs"
         buttonLabel="Inscríbete ahora en BGA"
-        tournamentLink="http://boardgamearena.com/tournament?id=350989&token=DnoNLDB3Wup5RudpwxkwWIUJongMLVVc"
+        tournamentLink="http://boardgamearena.com/tournament?id=353485&token=buRScI65Za3hFhr3JSo83Q62jBucl7Qj"
       />
       <h2 className="text-2xl font-bold mt-8">Fechas Pasadas</h2>
       <Image src="/separator-half.png" alt="Separator" className="w-52 h-0.5 mb-4" width={250} height={5} />
