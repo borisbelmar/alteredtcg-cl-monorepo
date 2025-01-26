@@ -29,11 +29,11 @@ export default function Hero () {
           </p>
           <a
             className="bg-sky-500 text-white font-bold px-6 py-4 rounded-lg hover:bg-sky-600 transition-colors whitespace-nowrap text-center"
-            href="http://boardgamearena.com/tournament?id=357101&token=YRiVxe2ov9CQjPlC3ERWQiSaCMCiRjyc"
+            href="http://boardgamearena.com/tournament?id=358948&token=WnyjOPk0QSQ3DwWKsWn6l8gFLuidWD9A"
             target="_blank"
             rel="noreferrer"
           >
-            Inscríbete para la fecha #12
+            Inscríbete para la fecha #13
           </a>
         </div>
       </div>
