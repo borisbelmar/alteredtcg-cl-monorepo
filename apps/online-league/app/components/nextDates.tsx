@@ -91,7 +91,7 @@ export default function NextDates () {
         image="/liga-fecha-12.webp"
         title="Liga CL Fecha #16"
         date="Domingo 16 de Febrero"
-        time="20:00 hrs"
+        time="21:00 hrs"
         buttonLabel="Inscríbete ahora en BGA"
         tournamentLink="http://boardgamearena.com/tournament?id=364273&token=AoKX9usegOlZDhz2mI2531RQGKikXIsx"
       />
