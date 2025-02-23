@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react"
 
-const LIVE_EMBED_URL = "https://www.youtube.com/embed/H3LEUropBAE?si=0bBhjoEMZ5OF36EE"
+const LIVE_EMBED_URL = "https://www.youtube.com/embed/R_PMA_pXfVI?si=Lp5Q8ZRAlnx7kGUD"
 
 export default function Live () {
   const ref = useRef<HTMLDivElement>(null)
