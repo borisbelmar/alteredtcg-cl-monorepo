@@ -1,6 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import { FACTIONS } from "@repo/schemas/card"
 import { CardResponse } from "../app/page"
-import Image from "next/image"
 
 interface CardItemInterface {
   card: CardResponse
@@ -23,13 +23,11 @@ export default function CardItem ({ card }: CardItemInterface) {
         </h3>
       </div>
       <div className="p-2 sm:p-3">
-        <Image
+        <img
+          loading="lazy"
           src={card.imagePath}
           alt={card.name}
           className="w-full object-cover rounded-lg"
-          width={480}
-          height={670}
-          loading="lazy"
         />
       </div>
       <div className="flex justify-between p-2" style={{
