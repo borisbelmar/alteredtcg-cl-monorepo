@@ -1,4 +1,4 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
 
 interface EventItemProps {
   image: string
@@ -22,7 +22,7 @@ export default function EventItem ({
   return (
     <div className="flex flex-col sm:flex-row gap-4 border rounded-lg overflow-hidden bg-sky-950">
       <div className="relative">
-        <Image src={image} className="sm:w-48" alt={title} width={500} height={500} />
+        <img src={image} className="sm:w-48" alt={title} width={500} height={500} />
         <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-l to-sky-950/0 from-sky-950"/>
       </div>
       <div className="flex justify-between flex-1 flex-col sm:flex-row">

@@ -1,4 +1,4 @@
-import Image from "next/image"
+/* eslint-disable @next/next/no-img-element */
 import About from "./components/about"
 import Hero from "./components/hero"
 import NextDates from "./components/nextDates"
@@ -9,9 +9,9 @@ export default function Page () {
     <div className="flex flex-col items-center justify-center min-h-screen bg-neutral-900 overflow-hidden w-screen">
       <Hero />
       <NextDates />
-      <Image src="/separator.png" alt="Separator" className="w-full h-0.5 px-16" width={900} height={5} />
+      <img src="/separator.png" alt="Separator" className="w-full h-0.5 px-16" width={900} height={5} />
       <Live />
-      <Image src="/separator.png" alt="Separator" className="w-full h-0.5 px-16" width={900} height={5} />
+      <img src="/separator.png" alt="Separator" className="w-full h-0.5 px-16" width={900} height={5} />
       <About />
       <footer className="w-full text-center py-4 text-xs self-end px-2">
         <p>

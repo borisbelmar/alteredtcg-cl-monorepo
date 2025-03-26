@@ -1,6 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 
-import Image from "next/image";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 
@@ -22,7 +22,7 @@ export default function About() {
       <h3 className="text-xl sm:text-2xl font-bold">
         Sobre la Comunidad
       </h3>
-      <Image src="/logo-alterados.png" alt="Alterados TCG" width={250} height={250} />
+      <img src="/logo-alterados.png" alt="Alterados TCG" width={250} height={250} />
       <p className="text-sm sm:text-lg  text-center mt-2">
         Alterados TCG es una comunidad dedicada a la promoción y difusión de Altered en Chile, creando contenido e instancias competitivas para la comunidad de jugadores de Altered TCG en Chile.
       </p>

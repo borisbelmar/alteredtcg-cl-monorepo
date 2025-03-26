@@ -1,4 +1,4 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
 import EventItem from "./eventItem";
 
 const pastEvents = [
@@ -93,7 +93,7 @@ export default function NextDates () {
   return (
     <div className="flex flex-col gap-2 max-w-6xl w-full mx-auto px-8 py-16">
       <h2 className="text-2xl font-bold">Próximas Fechas</h2>
-      <Image src="/separator-half.png" alt="Separator" className="w-52 h-0.5 mb-4" width={250} height={5} />
+      <img src="/separator-half.png" alt="Separator" className="w-52 h-0.5 mb-4" width={250} height={5} />
       <EventItem
         image="/liga-fecha-1.webp"
         title="Liga CL Fecha #17"
@@ -103,7 +103,7 @@ export default function NextDates () {
         tournamentLink="http://boardgamearena.com/tournament?id=366199&token=BiVaIy2Vc8oZ6XF7A0ebo0cQL4CRMM2o"
       />
       <h2 className="text-2xl font-bold mt-8">Fechas Pasadas</h2>
-      <Image src="/separator-half.png" alt="Separator" className="w-52 h-0.5 mb-4" width={250} height={5} />
+      <img src="/separator-half.png" alt="Separator" className="w-52 h-0.5 mb-4" width={250} height={5} />
       <div className="flex flex-col gap-4">
         {pastEvents.map(event => (
           <EventItem

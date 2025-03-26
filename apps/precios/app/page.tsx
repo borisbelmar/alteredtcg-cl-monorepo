@@ -1,7 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable turbo/no-undeclared-env-vars */
 import { Card, FACTIONS } from '@repo/schemas/card'
 import CardList from "../components/cardList"
-import Image from "next/image"
 import {
   S3Client,
   GetObjectCommand
@@ -56,7 +56,7 @@ export default async function Page () {
   return (
     <div className="bg-zinc-900 pt-12 pb-8">
       <div className="text-center flex flex-col max-w-6xl mx-auto items-center justify-between gap-8 px-8 mb-8">
-        <Image src="/altered-cl-white.png" width={200} height={200} alt="Altered CL" />
+        <img src="/altered-cl-white.png" width={200} height={200} alt="Altered CL" />
         <h1 className="sm:text-3xl text-lg max-w-6xl mx-auto px-4 sm:px-8 font-bold">
           Referencia de precios Singles Altered TCG
         </h1>
